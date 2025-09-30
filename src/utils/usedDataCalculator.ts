@@ -27,16 +27,9 @@ export class UsedDataCalculator {
   private dtmProcessor: DTMProcessor | null;
   private readonly absorpKoeff = 1.0; // Atmospheric absorption coefficient
 
-  private readonly logEnabled: boolean;
-  constructor(projectData: UsedProjectData, dtmProcessor: DTMProcessor | null = null, opts?: { enableLogging?: boolean }) {
+  constructor(projectData: UsedProjectData, dtmProcessor: DTMProcessor | null = null) {
     this.usedData = projectData;
     this.dtmProcessor = dtmProcessor;
-    const envFlag = import.meta.env?.VITE_DEBUG_LOGS as string | undefined;
-    const envEnabled = envFlag ? ['1', 'true', 'on', 'yes'].includes(envFlag.toLowerCase()) : false;
-    const isDev = import.meta.env.DEV;
-    console.log("Opts", opts);
-    console.log("logEnabled", opts?.enableLogging, envEnabled, isDev);
-    this.logEnabled = opts?.enableLogging ?? envEnabled ?? isDev ?? false;
 
   }
 

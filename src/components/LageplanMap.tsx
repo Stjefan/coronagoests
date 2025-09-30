@@ -278,19 +278,24 @@ const CoordinateDisplay: React.FC<{
   );
 };
 
-const createIcon = (color: string) => {
+const createIcon = (color: string, isHighlighted?: boolean, isFocused?: boolean) => {
+  const size = isFocused ? 18 : (isHighlighted ? 14 : 12);
+  const borderWidth = isFocused ? 3 : 2;
+  const iconTotalSize = size + borderWidth * 2;
+  
   return L.divIcon({
-    className: "custom-marker",
+    className: `custom-marker ${isFocused ? 'marker-focused' : ''} ${isHighlighted ? 'marker-highlighted' : ''}`,
     html: `<div style="
       background-color: ${color};
-      width: 12px;
-      height: 12px;
+      width: ${size}px;
+      height: ${size}px;
       border-radius: 50%;
-      border: 2px solid white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      border: ${borderWidth}px solid ${isFocused ? '#ffff00' : 'white'};
+      box-shadow: ${isFocused ? '0 0 10px 2px rgba(255,255,0,0.5), 0 2px 4px rgba(0,0,0,0.3)' : '0 2px 4px rgba(0,0,0,0.3)'};
+      ${isFocused ? 'animation: pulse 1.5s ease-in-out infinite;' : ''}
     "></div>`,
-    iconSize: [16, 16],
-    iconAnchor: [8, 8],
+    iconSize: [iconTotalSize, iconTotalSize],
+    iconAnchor: [iconTotalSize / 2, iconTotalSize / 2],
   });
 };
 
@@ -316,29 +321,35 @@ const createReferenceIcon = (label: string) => {
   });
 };
 
-const createMastIcon = () => {
+const createMastIcon = (isHighlighted?: boolean, isFocused?: boolean) => {
+  const size = isFocused ? 22 : (isHighlighted ? 18 : 16);
+  const borderWidth = isFocused ? 3 : 2;
+  const iconTotalSize = size + borderWidth * 2;
+  const bgColor = isHighlighted ? '#D2691E' : '#8B4513';
+  
   return L.divIcon({
-    className: "mast-marker",
+    className: `mast-marker ${isFocused ? 'marker-focused' : ''} ${isHighlighted ? 'marker-highlighted' : ''}`,
     html: `<div style="
-      background-color: #8B4513;
-      width: 16px;
-      height: 16px;
+      background-color: ${bgColor};
+      width: ${size}px;
+      height: ${size}px;
       border-radius: 2px;
-      border: 2px solid #654321;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      border: ${borderWidth}px solid ${isFocused ? '#ffff00' : '#654321'};
+      box-shadow: ${isFocused ? '0 0 10px 2px rgba(255,255,0,0.5), 0 2px 4px rgba(0,0,0,0.5)' : '0 2px 4px rgba(0,0,0,0.5)'};
       display: flex;
       align-items: center;
       justify-content: center;
+      ${isFocused ? 'animation: pulse 1.5s ease-in-out infinite;' : ''}
     ">
       <div style="
-        width: 8px;
-        height: 8px;
+        width: ${size * 0.5}px;
+        height: ${size * 0.5}px;
         background-color: #fff;
         border-radius: 50%;
       "></div>
     </div>`,
-    iconSize: [20, 20],
-    iconAnchor: [10, 10],
+    iconSize: [iconTotalSize, iconTotalSize],
+    iconAnchor: [iconTotalSize / 2, iconTotalSize / 2],
   });
 };
 
@@ -410,6 +421,15 @@ export const LageplanMap: React.FC<LageplanMapProps> = ({
     immissionGridDetailed,
     setContourDisplayMode,
     contourDisplayMode,
+    
+    // Marker selection state
+    selectedMarkerType,
+    focusedMarkerId,
+    markerHighlightColors,
+    setSelectedMarkerType,
+    focusToNextMarker,
+    focusToPreviousMarker,
+    clearMarkerSelection,
   } = useProjectStore();
 
   // Use store dimensions if available, otherwise use props or defaults
@@ -501,6 +521,59 @@ export const LageplanMap: React.FC<LageplanMapProps> = ({
     setActualDimensions({ width: imageWidth, height: imageHeight });
     onDimensionsUpdate?.({ width: imageWidth, height: imageHeight });
   }, [imageWidth, imageHeight, onDimensionsUpdate]);
+  
+  // Keyboard event handlers for marker selection and navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Check if the user is typing in an input field
+      const target = e.target as HTMLElement;
+      const isTyping = target && (
+        target.tagName === 'INPUT' || 
+        target.tagName === 'TEXTAREA' || 
+        target.contentEditable === 'true' ||
+        target.isContentEditable
+      );
+      
+      // If user is typing, don't intercept keyboard shortcuts
+      if (isTyping) {
+        return;
+      }
+      
+      // Number keys for marker type selection
+      if (e.key === '1') {
+        setSelectedMarkerType('hoehenpunkt');
+        e.preventDefault();
+      } else if (e.key === '2') {
+        setSelectedMarkerType('immissionpoint');
+        e.preventDefault();
+      } else if (e.key === '3') {
+        setSelectedMarkerType('esq');
+        e.preventDefault();
+      } else if (e.key === '4') {
+        setSelectedMarkerType('pole');
+        e.preventDefault();
+      }
+      // Tab navigation - only when a marker type is selected
+      else if (e.key === 'Tab' && selectedMarkerType) {
+        e.preventDefault();
+        if (e.shiftKey) {
+          focusToPreviousMarker();
+        } else {
+          focusToNextMarker();
+        }
+      }
+      // Escape to clear selection
+      else if (e.key === 'Escape') {
+        clearMarkerSelection();
+        e.preventDefault();
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [setSelectedMarkerType, focusToNextMarker, focusToPreviousMarker, clearMarkerSelection, selectedMarkerType]);
 
   useEffect(() => {
     // Only compute transform if we have valid dimensions
@@ -571,9 +644,31 @@ export const LageplanMap: React.FC<LageplanMapProps> = ({
     [actualDimensions.height, actualDimensions.width],
   ];
 
-  const immissionIcon = createIcon("#ff4444");
-  const esqIcon = createIcon("#4444ff");
-  const hoehenpunktIcon = createIcon("#44ff44");
+  // Get icon colors based on selection state
+  const getMarkerIcon = (type: 'hoehenpunkt' | 'immissionpoint' | 'esq', id: string) => {
+    const isHighlighted = selectedMarkerType === type;
+    const isFocused = focusedMarkerId === id;
+    const colors = markerHighlightColors.get(type);
+    
+    if (!colors) {
+      // Fallback colors
+      const defaultColors = {
+        hoehenpunkt: '#44ff44',
+        immissionpoint: '#ff4444',
+        esq: '#4444ff',
+      };
+      return createIcon(defaultColors[type], isHighlighted, isFocused);
+    }
+    
+    const color = isFocused ? colors.focused : (isHighlighted ? colors.highlighted : colors.normal);
+    return createIcon(color, isHighlighted, isFocused);
+  };
+  
+  const getPoleIcon = (id: string) => {
+    const isHighlighted = selectedMarkerType === 'pole';
+    const isFocused = focusedMarkerId === id;
+    return createMastIcon(isHighlighted, isFocused);
+  };
 
   // Transform GK coordinates to Leaflet coordinates
   // Pixel space: (0,0) is top-left, x increases right, y increases down
@@ -888,7 +983,7 @@ export const LageplanMap: React.FC<LageplanMapProps> = ({
                 id={id}
                 type="immissionpoint"
                 position={coords}
-                icon={immissionIcon}
+                icon={getMarkerIcon('immissionpoint', id)}
                 onDelete={async () => {
                   const confirmed = await confirm("Immissionspunkt löschen?");
                   if (confirmed) {
@@ -949,7 +1044,7 @@ export const LageplanMap: React.FC<LageplanMapProps> = ({
                 id={id}
                 type="esq"
                 position={coords}
-                icon={esqIcon}
+                icon={getMarkerIcon('esq', id)}
                 onDelete={async () => {
                   const confirmed = await confirm("ESQ löschen?");
                   if (confirmed) {
@@ -997,7 +1092,7 @@ export const LageplanMap: React.FC<LageplanMapProps> = ({
                 id={id}
                 type="hoehenpunkt"
                 position={coords}
-                icon={hoehenpunktIcon}
+                icon={getMarkerIcon('hoehenpunkt', id)}
                 onDelete={async () => {
                   const confirmed = await confirm("Höhenpunkt löschen?");
                   if (confirmed) {
@@ -1055,7 +1150,7 @@ export const LageplanMap: React.FC<LageplanMapProps> = ({
                         id={pole.id}
                         type="pole"
                         position={coords}
-                        icon={createMastIcon()}
+                        icon={getPoleIcon(pole.id)}
                         onDelete={async () => {
                           const confirmed = await confirm(
                             `Mast "${pole.name}" löschen?`

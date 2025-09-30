@@ -41,7 +41,7 @@ describe('Frequency-dependent calculations', () => {
       }
     }
 
-    const calculator = new UsedDataCalculator(projectData, dtmProcessor, { enableLogging: true });
+    const calculator = new UsedDataCalculator(projectData, dtmProcessor);
 
     // fs.writeFileSync("calculator.json", JSON.stringify(calculator, null, 2));
     

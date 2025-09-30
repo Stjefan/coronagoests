@@ -5,6 +5,7 @@ import { MenuBar } from './components/MenuBar'
 import { StatusBar } from './components/StatusBar'
 import { ReferencePointCalibration } from './components/ReferencePointCalibration'
 import { MastEditDialog } from './components/dialogs/MastEditDialog'
+import { MarkerSelectionToolbar } from './components/MarkerSelectionToolbar'
 import { DialogProvider } from './hooks/useDialog'
 import { useComputationErrorDisplay } from './hooks/useComputationErrorDisplay'
 import { HelmertTransform } from './utils/helmertTransform'
@@ -79,6 +80,7 @@ function App() {
             showContour={showContour}
             onDimensionsUpdate={setMapDimensions}
           />
+          <MarkerSelectionToolbar />
           {showReferenceCalibration && <ReferencePointCalibration />}
           {/* Use MastEditDialog for both poles and masts, EditForms for other elements */}
           {(selectedElementType === 'pole') && selectedElementId && (

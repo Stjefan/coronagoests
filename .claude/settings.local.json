@@ -29,7 +29,8 @@
       "Bash(mv:*)",
       "Bash(taskkill:*)",
       "Bash(dir:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(npx eslint:*)"
     ],
     "deny": [],
     "ask": []

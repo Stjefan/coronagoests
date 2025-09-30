@@ -1,6 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { useProjectStore } from '../store/projectStore';
 
+interface FormData {
+  // Common fields
+  rechts?: string;
+  hoch?: string;
+  z?: string;
+  
+  // Immission point specific
+  name?: string;
+  heightOffset?: string;
+  g_bodenfaktor?: string;
+  
+  // ESQ specific
+  bezeichnung?: string;
+  hoehe?: string;
+  l?: string;
+  s?: string;
+  z_impulshaltigkeit?: string;
+  z_tonhaltigkeit?: string;
+  z_cmet?: string;
+  raumwinkelmass?: string;
+  schallleistungspegel?: boolean;
+  ruhezeitzuschlag?: boolean;
+  beurteilungszeitraum?: string;
+  einwirkzeit?: string;
+  zeiteinheit?: string;
+}
+
 export const EditForms: React.FC = () => {
   const {
     selectedElementId,
@@ -16,7 +43,7 @@ export const EditForms: React.FC = () => {
 
   } = useProjectStore();
   
-  const [formData, setFormData] = useState<any>({});
+  const [formData, setFormData] = useState<FormData>({});
   
   useEffect(() => {
     if (selectedElementId) {
@@ -24,9 +51,9 @@ export const EditForms: React.FC = () => {
         const hp = hoehenpunkte.get(selectedElementId);
         if (hp) {
           setFormData({
-            rechts: hp.GK_Vektor.GK.Rechts,
-            hoch: hp.GK_Vektor.GK.Hoch,
-            z: hp.GK_Vektor.z,
+            rechts: hp.GK_Vektor.GK.Rechts.toString(),
+            hoch: hp.GK_Vektor.GK.Hoch.toString(),
+            z: hp.GK_Vektor.z.toString(),
           });
         }
       } else if (selectedElementType === 'immissionpoint') {
@@ -34,11 +61,11 @@ export const EditForms: React.FC = () => {
         if (ip) {
           setFormData({
             name: ip.Name,
-            rechts: ip.Position.GK.Rechts,
-            hoch: ip.Position.GK.Hoch,
-            z: ip.Position.z,
-            heightOffset: ip.HeightOffset,
-            g_bodenfaktor: ip.G_Bodenfaktor,
+            rechts: ip.Position.GK.Rechts.toString(),
+            hoch: ip.Position.GK.Hoch.toString(),
+            z: ip.Position.z.toString(),
+            heightOffset: ip.HeightOffset.toString(),
+            g_bodenfaktor: ip.G_Bodenfaktor.toString(),
           });
         }
       } else if (selectedElementType === 'esq') {
@@ -46,20 +73,21 @@ export const EditForms: React.FC = () => {
         if (esq) {
           setFormData({
             bezeichnung: esq.Bezeichnung,
-            rechts: esq.Position.GK.Rechts,
-            hoch: esq.Position.GK.Hoch,
-            z: esq.Position.z,
-            hoehe: esq.Hoehe,
-            l: esq.L,
-            s: esq.S,
-            z_impulshaltigkeit: esq.Z_Impulshaltigkeit,
-            z_tonhaltigkeit: esq.Z_Tonhaltigkeit,
-            z_cmet: esq.Z_Cmet,
+            rechts: esq.Position.GK.Rechts.toString(),
+            hoch: esq.Position.GK.Hoch.toString(),
+            z: esq.Position.z.toString(),
+            hoehe: esq.Hoehe.toString(),
+            l: esq.L.toString(),
+            s: esq.S.toString(),
+            z_impulshaltigkeit: esq.Z_Impulshaltigkeit.toString(),
+            z_tonhaltigkeit: esq.Z_Tonhaltigkeit.toString(),
+            z_cmet: esq.Z_Cmet.toString(),
+            raumwinkelmass: esq.Raumwinkelmass.toString(),
             schallleistungspegel: esq.Schallleistungspegel,
             ruhezeitzuschlag: esq.Ruhezeitzuschlag,
-            beurteilungszeitraum: esq.Beurteilungszeitraum,
-            einwirkzeit: esq.Einwirkzeit,
-            zeiteinheit: esq.Zeiteinheit,
+            beurteilungszeitraum: esq.Beurteilungszeitraum.toString(),
+            einwirkzeit: esq.Einwirkzeit.toString(),
+            zeiteinheit: esq.Zeiteinheit.toString(),
           });
         }
       }
@@ -75,46 +103,47 @@ export const EditForms: React.FC = () => {
       updateHoehenpunkt(selectedElementId, {
         GK_Vektor: {
           GK: {
-            Rechts: parseFloat(formData.rechts),
-            Hoch: parseFloat(formData.hoch),
+            Rechts: parseFloat(formData.rechts || '0'),
+            Hoch: parseFloat(formData.hoch || '0'),
           },
-          z: parseFloat(formData.z),
+          z: parseFloat(formData.z || '0'),
         },
       });
     } else if (selectedElementType === 'immissionpoint') {
       updateImmissionPoint(selectedElementId, {
-        Name: formData.name,
+        Name: formData.name || '',
         Position: {
           GK: {
-            Rechts: parseFloat(formData.rechts),
-            Hoch: parseFloat(formData.hoch),
+            Rechts: parseFloat(formData.rechts || '0'),
+            Hoch: parseFloat(formData.hoch || '0'),
           },
-          z: parseFloat(formData.z),
+          z: parseFloat(formData.z || '0'),
         },
-        HeightOffset: parseFloat(formData.heightOffset),
-        G_Bodenfaktor: parseFloat(formData.g_bodenfaktor),
+        HeightOffset: parseFloat(formData.heightOffset || '0'),
+        G_Bodenfaktor: parseFloat(formData.g_bodenfaktor || '0'),
       });
     } else if (selectedElementType === 'esq') {
       updateESQ(selectedElementId, {
-        Bezeichnung: formData.bezeichnung,
+        Bezeichnung: formData.bezeichnung || '',
         Position: {
           GK: {
-            Rechts: parseFloat(formData.rechts),
-            Hoch: parseFloat(formData.hoch),
+            Rechts: parseFloat(formData.rechts || '0'),
+            Hoch: parseFloat(formData.hoch || '0'),
           },
-          z: parseFloat(formData.z),
+          z: parseFloat(formData.z || '0'),
         },
-        Hoehe: parseFloat(formData.hoehe),
-        L: parseFloat(formData.l),
-        S: parseFloat(formData.s),
-        Z_Impulshaltigkeit: parseFloat(formData.z_impulshaltigkeit),
-        Z_Tonhaltigkeit: parseFloat(formData.z_tonhaltigkeit),
-        Z_Cmet: parseFloat(formData.z_cmet),
-        Schallleistungspegel: formData.schallleistungspegel,
-        Ruhezeitzuschlag: formData.ruhezeitzuschlag,
-        Beurteilungszeitraum: parseInt(formData.beurteilungszeitraum) || 0,
-        Einwirkzeit: parseFloat(formData.einwirkzeit),
-        Zeiteinheit: parseInt(formData.zeiteinheit) || 0,
+        Hoehe: parseFloat(formData.hoehe || '0'),
+        L: parseFloat(formData.l || '0'),
+        S: parseFloat(formData.s || '0'),
+        Z_Impulshaltigkeit: parseFloat(formData.z_impulshaltigkeit || '0'),
+        Z_Tonhaltigkeit: parseFloat(formData.z_tonhaltigkeit || '0'),
+        Z_Cmet: parseFloat(formData.z_cmet || '0'),
+        Raumwinkelmass: parseInt(formData.raumwinkelmass || '0') || 0,
+        Schallleistungspegel: formData.schallleistungspegel || false,
+        Ruhezeitzuschlag: formData.ruhezeitzuschlag || false,
+        Beurteilungszeitraum: parseInt(formData.beurteilungszeitraum || '0') || 0,
+        Einwirkzeit: parseFloat(formData.einwirkzeit || '0'),
+        Zeiteinheit: parseInt(formData.zeiteinheit || '0') || 0,
       });
     } 
     
@@ -385,6 +414,19 @@ export const EditForms: React.FC = () => {
                 onChange={(e) => setFormData({ ...formData, z_cmet: e.target.value })}
               />
               
+              <label style={labelStyle}>Raumwinkelmass:</label>
+              <select
+                style={inputStyle}
+                value={formData.raumwinkelmass ?? '0'}
+                onChange={(e) => setFormData({ ...formData, raumwinkelmass: e.target.value })}
+                required
+              >
+                <option value="0">0</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+              </select>
+              
               <label style={{ ...labelStyle, display: 'flex', alignItems: 'center' }}>
                 <input
                   type="checkbox"
@@ -408,8 +450,8 @@ export const EditForms: React.FC = () => {
               <label style={labelStyle}>Beurteilungszeitraum:</label>
               <select
                 style={inputStyle}
-                value={formData.beurteilungszeitraum ?? 0}
-                onChange={(e) => setFormData({ ...formData, beurteilungszeitraum: parseInt(e.target.value) })}
+                value={formData.beurteilungszeitraum ?? '0'}
+                onChange={(e) => setFormData({ ...formData, beurteilungszeitraum: e.target.value })}
                 required
               >
                 <option value="0">0 - Tag (6:00-22:00)</option>
@@ -430,8 +472,8 @@ export const EditForms: React.FC = () => {
               <label style={labelStyle}>Zeiteinheit:</label>
               <select
                 style={inputStyle}
-                value={formData.zeiteinheit ?? 0}
-                onChange={(e) => setFormData({ ...formData, zeiteinheit: parseInt(e.target.value) })}
+                value={formData.zeiteinheit ?? '0'}
+                onChange={(e) => setFormData({ ...formData, zeiteinheit: e.target.value })}
                 required
               >
                 <option value="0">0 - Sekunden</option>

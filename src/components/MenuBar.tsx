@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useProjectStore } from '../store/projectStore';
 import type { GKVector3d } from '../types/usedData';
 import { Button } from './ui/button';
@@ -31,6 +31,7 @@ import { ColorPaletteDialog } from './dialogs/ColorPaletteDialog';
 import { ProjectSettingsDialog } from './dialogs/ProjectSettingsDialog';
 import { HelmertTransform } from '../utils/helmertTransform';
 import { LoadingOverlay } from './LoadingOverlay';
+import { ImageRotationDialog } from './dialogs/ImageRotationDialog';
 
 interface MenuBarProps {
   mapWidth: number;
@@ -77,6 +78,14 @@ export const MenuBar: React.FC<MenuBarProps> = ({
   const [mapLayersDialogOpen, setMapLayersDialogOpen] = useState(false);
   const [colorPaletteDialogOpen, setColorPaletteDialogOpen] = useState(false);
   const [projectSettingsDialogOpen, setProjectSettingsDialogOpen] = useState(false);
+  const [imageRotationDialogOpen, setImageRotationDialogOpen] = useState(false);
+  
+  // Image rotation state
+  const [pendingImageData, setPendingImageData] = useState<{
+    url: string;
+    width: number;
+    height: number;
+  } | null>(null);
   
   const {
     projectName,
@@ -96,6 +105,46 @@ export const MenuBar: React.FC<MenuBarProps> = ({
   } = useProjectStore();
   
   const { prompt, confirm } = useDialog();
+  
+  const hasValidSetup = projectImage && referencePoints.length >= 2;
+  
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Check if Ctrl (Windows/Linux) or Cmd (Mac) is pressed
+      const isCtrlOrCmd = e.ctrlKey || e.metaKey;
+      
+      if (!isCtrlOrCmd) return;
+      
+      // Handle Ctrl+N - New Project
+      if (e.key === 'n' || e.key === 'N') {
+        e.preventDefault();
+        handleNewProject();
+      }
+      
+      // Handle Ctrl+S - Save/Download as ZIP
+      if (e.key === 's' || e.key === 'S') {
+        e.preventDefault();
+        if (hasValidSetup) {
+          handleExportProject(true);
+        }
+      }
+      
+      // Handle Ctrl+L - Load/Open Project
+      if (e.key === 'x' || e.key === 'X') {
+        e.preventDefault();
+        projectInputRef.current?.click();
+      }
+    };
+    
+    // Add event listener
+    window.addEventListener('keydown', handleKeyDown);
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [hasValidSetup]); // Include hasValidSetup as dependency
   
   const handleNewProject = async () => {
     const name = await prompt('Name für neues Projekt:', 'Neues Projekt');
@@ -135,7 +184,44 @@ export const MenuBar: React.FC<MenuBarProps> = ({
     }
   };
   
-  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const rotateImage = (imageUrl: string, degrees: number): Promise<{ rotatedUrl: string; width: number; height: number }> => {
+    return new Promise((resolve, reject) => {
+      const img = document.createElement('img');
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          reject(new Error('Could not get canvas context'));
+          return;
+        }
+
+        // Calculate new dimensions based on rotation
+        const rad = (degrees * Math.PI) / 180;
+        const sin = Math.abs(Math.sin(rad));
+        const cos = Math.abs(Math.cos(rad));
+        
+        const newWidth = img.width * cos + img.height * sin;
+        const newHeight = img.width * sin + img.height * cos;
+        
+        canvas.width = newWidth;
+        canvas.height = newHeight;
+        
+        // Move to center and rotate
+        ctx.translate(newWidth / 2, newHeight / 2);
+        ctx.rotate(rad);
+        
+        // Draw image centered
+        ctx.drawImage(img, -img.width / 2, -img.height / 2);
+        
+        const rotatedUrl = canvas.toDataURL('image/png');
+        resolve({ rotatedUrl, width: Math.round(newWidth), height: Math.round(newHeight) });
+      };
+      img.onerror = () => reject(new Error('Failed to load image for rotation'));
+      img.src = imageUrl;
+    });
+  };
+
+  const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
     
@@ -147,13 +233,34 @@ export const MenuBar: React.FC<MenuBarProps> = ({
     setIsLoadingImage(true);
     
     const reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = async (e) => {
       const imageUrl = e.target?.result as string;
       
       const img = document.createElement('img');
-      img.onload = () => {
-        setProjectImage(imageUrl, img.width, img.height);
-        setIsLoadingImage(false);
+      img.onload = async () => {
+        try {
+          // Ask user if they want to rotate the image
+          const shouldRotate = await confirm('Möchten Sie das hochgeladene Lageplan-Bild drehen?');
+          
+          if (shouldRotate) {
+            // Store the image data and open rotation dialog
+            setPendingImageData({
+              url: imageUrl,
+              width: img.width,
+              height: img.height
+            });
+            setImageRotationDialogOpen(true);
+            setIsLoadingImage(false);
+          } else {
+            // Use image as-is
+            setProjectImage(imageUrl, img.width, img.height);
+            setIsLoadingImage(false);
+          }
+        } catch (error) {
+          console.error('Error during image processing:', error);
+          alert('Fehler beim Verarbeiten des Bildes.');
+          setIsLoadingImage(false);
+        }
       };
       img.onerror = () => {
         alert('Fehler beim Laden des Bildes.');
@@ -168,6 +275,37 @@ export const MenuBar: React.FC<MenuBarProps> = ({
     };
     
     reader.readAsDataURL(file);
+  };
+
+  const handleRotationConfirm = async (rotation: number) => {
+    if (!pendingImageData) return;
+    
+    setIsLoadingImage(true);
+    setImageRotationDialogOpen(false);
+    
+    try {
+      if (rotation === 0) {
+        // No rotation needed
+        setProjectImage(pendingImageData.url, pendingImageData.width, pendingImageData.height);
+      } else {
+        // Apply rotation
+        const rotationResult = await rotateImage(pendingImageData.url, rotation);
+        setProjectImage(rotationResult.rotatedUrl, rotationResult.width, rotationResult.height);
+      }
+    } catch (error) {
+      console.error('Error applying rotation:', error);
+      alert('Fehler beim Drehen des Bildes. Das ursprüngliche Bild wird verwendet.');
+      setProjectImage(pendingImageData.url, pendingImageData.width, pendingImageData.height);
+    } finally {
+      setPendingImageData(null);
+      setIsLoadingImage(false);
+    }
+  };
+
+  const handleRotationCancel = () => {
+    setImageRotationDialogOpen(false);
+    setPendingImageData(null);
+    setIsLoadingImage(false);
   };
   
   const handleExportProject = async (asZip: boolean = false) => {
@@ -368,11 +506,6 @@ export const MenuBar: React.FC<MenuBarProps> = ({
       setLoadingProgress(undefined);
     }
   };
-  
-
-  
-
-  const hasValidSetup = projectImage && referencePoints.length >= 2;
   
   const toggleDropdown = (menu: string) => {
     setDropdownOpen(dropdownOpen === menu ? null : menu);
@@ -862,6 +995,18 @@ export const MenuBar: React.FC<MenuBarProps> = ({
         isOpen={projectSettingsDialogOpen}
         onClose={() => setProjectSettingsDialogOpen(false)}
       />
+      
+      {/* Image Rotation Dialog */}
+      {pendingImageData && (
+        <ImageRotationDialog
+          isOpen={imageRotationDialogOpen}
+          onClose={handleRotationCancel}
+          onConfirm={handleRotationConfirm}
+          imageUrl={pendingImageData.url}
+          originalWidth={pendingImageData.width}
+          originalHeight={pendingImageData.height}
+        />
+      )}
       
       {/* Loading Overlay */}
       <LoadingOverlay 

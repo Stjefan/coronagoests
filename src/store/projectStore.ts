@@ -26,6 +26,7 @@ import { createConnection } from '../utils/UIFactory';
 export type EditMode = 'view' | 'add' | 'edit' | 'delete';
 export type ElementType = 'hoehenpunkt' | 'esq' | 'pole' | 'immissionpoint';
 export type ContourDisplayMode = 'total' | 'esq' | 'trassen';
+export type MarkerType = 'hoehenpunkt' | 'immissionpoint' | 'esq' | 'pole';
 
 export interface ReferencePoint {
   id: string;
@@ -60,7 +61,6 @@ export interface ConductorConnection {
   leiterNum: number;   // Target conductor number (1-based)
 }
 
-const OPTS_LOGGING = { enableLogging: true };
 interface ProjectStore {
   // Project management
   projectName: string;
@@ -139,6 +139,11 @@ interface ProjectStore {
   selectedElementType: ElementType;
   selectedElementId: string | null;
   isEditFormOpen: boolean;
+  
+  // Marker selection and highlighting
+  selectedMarkerType: MarkerType | null;
+  focusedMarkerId: string | null;
+  markerHighlightColors: Map<MarkerType, { normal: string; highlighted: string; focused: string }>;
   
   // Actions
   loadProjectData: (data: UsedProjectData) => void;
@@ -242,6 +247,14 @@ interface ProjectStore {
   // Computation settings
   setMitFrequenz: (enabled: boolean) => void;
   setKt: (value: number) => void;
+  
+  // Marker selection actions
+  setSelectedMarkerType: (type: MarkerType | null) => void;
+  setFocusedMarkerId: (id: string | null) => void;
+  focusToNextMarker: () => void;
+  focusToPreviousMarker: () => void;
+  clearMarkerSelection: () => void;
+  getMarkersByType: (type: MarkerType) => Array<{ id: string; position: [number, number] }>;
 
   mastLayoutTemplates: Map<string, MastLayoutTemplate>;
 }
@@ -318,6 +331,16 @@ export const useProjectStore = create<ProjectStore>((set, get) => ({
   selectedElementId: null,
   isEditFormOpen: false,
   mastLayoutTemplates: new Map(),
+  
+  // Marker selection initial state
+  selectedMarkerType: null,
+  focusedMarkerId: null,
+  markerHighlightColors: new Map([
+    ['hoehenpunkt', { normal: '#44ff44', highlighted: '#00ff00', focused: '#00ff00' }],
+    ['immissionpoint', { normal: '#ff4444', highlighted: '#ff0000', focused: '#ff0000' }],
+    ['esq', { normal: '#4444ff', highlighted: '#0000ff', focused: '#0000ff' }],
+    ['pole', { normal: '#8B4513', highlighted: '#D2691E', focused: '#D2691E' }],
+  ]),
   // Load project data and convert to editable format
   loadProjectData: (data) => {
     const hoehenpunkte = new Map<string, EditableHoehenpunkt>();
@@ -548,7 +571,7 @@ export const useProjectStore = create<ProjectStore>((set, get) => ({
     const dtmProcessor = new DTMProcessor(data.DGMDreiecke || [], data.Hoehenpunkte || []);
     dtmProcessor.setDGMKante(data.DGMKanten || []);
     
-    const calculator = new UsedDataCalculator(data, dtmProcessor, OPTS_LOGGING);
+    const calculator = new UsedDataCalculator(data, dtmProcessor);
     
     set({
       
@@ -595,6 +618,93 @@ export const useProjectStore = create<ProjectStore>((set, get) => ({
   setSelectedElementType: (type) => set({ selectedElementType: type }),
   selectElement: (id) => set({ selectedElementId: id }),
   setEditFormOpen: (open) => set({ isEditFormOpen: open }),
+  
+  // Marker selection actions
+  setSelectedMarkerType: (type) => set({ 
+    selectedMarkerType: type,
+    focusedMarkerId: null  // Reset focused marker when changing type
+  }),
+  
+  setFocusedMarkerId: (id) => set({ focusedMarkerId: id }),
+  
+  clearMarkerSelection: () => set({
+    selectedMarkerType: null,
+    focusedMarkerId: null
+  }),
+  
+  getMarkersByType: (type) => {
+    const state = get();
+    const markers: Array<{ id: string; position: [number, number] }> = [];
+    
+    switch (type) {
+      case 'hoehenpunkt':
+        state.hoehenpunkte.forEach((punkt, id) => {
+          markers.push({
+            id,
+            position: [punkt.GK_Vektor.GK.Rechts, punkt.GK_Vektor.GK.Hoch]
+          });
+        });
+        break;
+      case 'immissionpoint':
+        state.immissionPoints.forEach((point, id) => {
+          markers.push({
+            id,
+            position: [point.Position.GK.Rechts, point.Position.GK.Hoch]
+          });
+        });
+        break;
+      case 'esq':
+        state.esqSources.forEach((source, id) => {
+          markers.push({
+            id,
+            position: [source.Position.GK.Rechts, source.Position.GK.Hoch]
+          });
+        });
+        break;
+      case 'pole':
+        state.poles.forEach((pole, id) => {
+          if (pole.position) {
+            markers.push({
+              id,
+              position: [pole.position.GK.Rechts, pole.position.GK.Hoch]
+            });
+          }
+        });
+        break;
+    }
+    
+    return markers;
+  },
+  
+  focusToNextMarker: () => {
+    const state = get();
+    if (!state.selectedMarkerType) return;
+    
+    const markers = state.getMarkersByType(state.selectedMarkerType);
+    if (markers.length === 0) return;
+    
+    const currentIndex = state.focusedMarkerId 
+      ? markers.findIndex(m => m.id === state.focusedMarkerId)
+      : -1;
+    
+    const nextIndex = (currentIndex + 1) % markers.length;
+    set({ focusedMarkerId: markers[nextIndex].id });
+  },
+  
+  focusToPreviousMarker: () => {
+    const state = get();
+    if (!state.selectedMarkerType) return;
+    
+    const markers = state.getMarkersByType(state.selectedMarkerType);
+    if (markers.length === 0) return;
+    
+    const currentIndex = state.focusedMarkerId 
+      ? markers.findIndex(m => m.id === state.focusedMarkerId)
+      : 0;
+    
+    const prevIndex = (currentIndex - 1 + markers.length) % markers.length;
+    set({ focusedMarkerId: markers[prevIndex].id });
+  },
   
   // Project management actions
   createNewProject: (name) => {
@@ -1238,7 +1348,7 @@ export const useProjectStore = create<ProjectStore>((set, get) => ({
     }
     
     // Create a new calculator instance with current data and the current DTM processor
-    const currentCalculator = new UsedDataCalculator(currentProjectData, state.dtmProcessor, OPTS_LOGGING);
+    const currentCalculator = new UsedDataCalculator(currentProjectData, state.dtmProcessor);
     
     // Find the index of the immission point in the current data
     const immissionPointIndex = currentProjectData.ImmissionPoints.findIndex(
@@ -1392,7 +1502,7 @@ export const useProjectStore = create<ProjectStore>((set, get) => ({
     // Create calculator with complete GUI data - only create it once
     let calculator: UsedDataCalculator | null = null;
     if (dtmProcessor) {
-      calculator = new UsedDataCalculator(guiProjectData, dtmProcessor, OPTS_LOGGING);
+      calculator = new UsedDataCalculator(guiProjectData, dtmProcessor);
       set({ calculator });  // Store the calculator in state for reuse
     } else {
       const errorMsg = 'Failed to create DTM processor, cannot create calculator';
@@ -1556,7 +1666,7 @@ export const useProjectStore = create<ProjectStore>((set, get) => ({
       };
       
       // Create calculator with temporary data
-      const tempCalculator = new UsedDataCalculator(tempProjectData, state.dtmProcessor, OPTS_LOGGING);
+      const tempCalculator = new UsedDataCalculator(tempProjectData, state.dtmProcessor);
       
       // Calculate immission values for each grid point
       console.log(`Calculating immission values for ${tempImmissionPoints.length} grid points...`);
@@ -1838,7 +1948,7 @@ export const useProjectStore = create<ProjectStore>((set, get) => ({
           ESQSources: Array.from(state.esqSources.values()),
           LeiterTypes: Array.from(state.leiterTypes.values()),
         };
-        const newCalculator = new UsedDataCalculator(updatedProjectData, newDtmProcessor, OPTS_LOGGING);
+        const newCalculator = new UsedDataCalculator(updatedProjectData, newDtmProcessor);
         set({ calculator: newCalculator });
         console.log('Updated calculator with new terrain data');
         
