@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(grep:*)",
+      "Bash(pkill:*)",
+      "Bash(npm info:*)",
+      "Bash(npx tsc:*)",
+      "Bash(rm:*)",
+      "Bash(npm run test:*)",
+      "Bash(npx shadcn@latest init:*)",
+      "Bash(git add:*)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(npm run build:*)",
+      "Bash(git rm:*)",
+      "Bash(git clean:*)",
+      "Bash(powershell:*)",
+      "Bash(npm run typecheck:*)",
+      "Bash(npm run:*)",
+      "Bash(jq:*)",
+      "Bash(python:*)",
+      "Bash(cat:*)",
+      "Bash(npm test:*)",
+      "Bash(npx vitest run:*)",
+      "Bash(node:*)",
+      "Bash(npx ts-node:*)",
+      "Bash(npx tsx:*)",
+      "Bash(mv:*)",
+      "Bash(taskkill:*)",
+      "Bash(dir:*)",
+      "Bash(git reset:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

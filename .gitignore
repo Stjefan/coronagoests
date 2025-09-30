@@ -1,0 +1,12 @@
+node_modules/*
+
+# Environment variables
+.env
+.env.local
+
+# Keep example and environment-specific files
+!.env.example
+!.env.development
+!.env.production
+
+nul

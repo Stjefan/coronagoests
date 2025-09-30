@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <PackageJsonName Condition="$(PackageJsonName) == ''">coronagoests</PackageJsonName>
+    <PackageJsonPrivate Condition="$(PackageJsonPrivate) == ''">true</PackageJsonPrivate>
+    <PackageJsonVersion Condition="$(PackageJsonVersion) == ''">0.0.0</PackageJsonVersion>
+    <PackageJsonType Condition="$(PackageJsonType) == ''">module</PackageJsonType>
+    <PackageJsonScriptsDev Condition="$(PackageJsonScriptsDev) == ''">vite</PackageJsonScriptsDev>
+    <PackageJsonScriptsBuild Condition="$(PackageJsonScriptsBuild) == ''">tsc -b &amp;&amp; vite build</PackageJsonScriptsBuild>
+    <PackageJsonScriptsLint Condition="$(PackageJsonScriptsLint) == ''">eslint .</PackageJsonScriptsLint>
+    <PackageJsonScriptsPreview Condition="$(PackageJsonScriptsPreview) == ''">vite preview</PackageJsonScriptsPreview>
+    <PackageJsonScriptsTest Condition="$(PackageJsonScriptsTest) == ''">vitest</PackageJsonScriptsTest>
+    <PackageJsonScriptsTestUi Condition="$(PackageJsonScriptsTestUi) == ''">vitest --ui</PackageJsonScriptsTestUi>
+    <PackageJsonScriptsTestCoverage Condition="$(PackageJsonScriptsTestCoverage) == ''">vitest --coverage</PackageJsonScriptsTestCoverage>
+    <PackageJsonDependenciesRadixUiReactAlertDialog Condition="$(PackageJsonDependenciesRadixUiReactAlertDialog) == ''">^1.1.15</PackageJsonDependenciesRadixUiReactAlertDialog>
+    <PackageJsonDependenciesRadixUiReactCheckbox Condition="$(PackageJsonDependenciesRadixUiReactCheckbox) == ''">^1.3.3</PackageJsonDependenciesRadixUiReactCheckbox>
+    <PackageJsonDependenciesRadixUiReactContextMenu Condition="$(PackageJsonDependenciesRadixUiReactContextMenu) == ''">^2.2.16</PackageJsonDependenciesRadixUiReactContextMenu>
+    <PackageJsonDependenciesRadixUiReactDialog Condition="$(PackageJsonDependenciesRadixUiReactDialog) == ''">^1.1.15</PackageJsonDependenciesRadixUiReactDialog>
+    <PackageJsonDependenciesRadixUiReactSelect Condition="$(PackageJsonDependenciesRadixUiReactSelect) == ''">^2.2.6</PackageJsonDependenciesRadixUiReactSelect>
+    <PackageJsonDependenciesRadixUiReactSlot Condition="$(PackageJsonDependenciesRadixUiReactSlot) == ''">^1.2.3</PackageJsonDependenciesRadixUiReactSlot>
+    <PackageJsonDependenciesRadixUiReactSwitch Condition="$(PackageJsonDependenciesRadixUiReactSwitch) == ''">^1.2.6</PackageJsonDependenciesRadixUiReactSwitch>
+    <PackageJsonDependenciesRadixUiReactTabs Condition="$(PackageJsonDependenciesRadixUiReactTabs) == ''">^1.1.13</PackageJsonDependenciesRadixUiReactTabs>
+    <PackageJsonDependenciesTailwindcssVite Condition="$(PackageJsonDependenciesTailwindcssVite) == ''">^4.1.12</PackageJsonDependenciesTailwindcssVite>
+    <PackageJsonDependenciesTypesJszip Condition="$(PackageJsonDependenciesTypesJszip) == ''">^3.4.0</PackageJsonDependenciesTypesJszip>
+    <PackageJsonDependenciesTypesLeaflet Condition="$(PackageJsonDependenciesTypesLeaflet) == ''">^1.9.20</PackageJsonDependenciesTypesLeaflet>
+    <PackageJsonDependenciesClassVarianceAuthority Condition="$(PackageJsonDependenciesClassVarianceAuthority) == ''">^0.7.1</PackageJsonDependenciesClassVarianceAuthority>
+    <PackageJsonDependenciesClsx Condition="$(PackageJsonDependenciesClsx) == ''">^2.1.1</PackageJsonDependenciesClsx>
+    <PackageJsonDependenciesD3 Condition="$(PackageJsonDependenciesD3) == ''">^7.9.0</PackageJsonDependenciesD3>
+    <PackageJsonDependenciesD3Contour Condition="$(PackageJsonDependenciesD3Contour) == ''">^4.0.2</PackageJsonDependenciesD3Contour>
+    <PackageJsonDependenciesD3Geo Condition="$(PackageJsonDependenciesD3Geo) == ''">^3.1.1</PackageJsonDependenciesD3Geo>
+    <PackageJsonDependenciesD3Scale Condition="$(PackageJsonDependenciesD3Scale) == ''">^4.0.2</PackageJsonDependenciesD3Scale>
+    <PackageJsonDependenciesDelaunator Condition="$(PackageJsonDependenciesDelaunator) == ''">^5.0.1</PackageJsonDependenciesDelaunator>
+    <PackageJsonDependenciesHtmlToImage Condition="$(PackageJsonDependenciesHtmlToImage) == ''">^1.11.13</PackageJsonDependenciesHtmlToImage>
+    <PackageJsonDependenciesJszip Condition="$(PackageJsonDependenciesJszip) == ''">^3.10.1</PackageJsonDependenciesJszip>
+    <PackageJsonDependenciesLeaflet Condition="$(PackageJsonDependenciesLeaflet) == ''">^1.9.4</PackageJsonDependenciesLeaflet>
+    <PackageJsonDependenciesLucideReact Condition="$(PackageJsonDependenciesLucideReact) == ''">^0.540.0</PackageJsonDependenciesLucideReact>
+    <PackageJsonDependenciesMathjs Condition="$(PackageJsonDependenciesMathjs) == ''">^14.6.0</PackageJsonDependenciesMathjs>
+    <PackageJsonDependenciesReact Condition="$(PackageJsonDependenciesReact) == ''">^19.1.1</PackageJsonDependenciesReact>
+    <PackageJsonDependenciesReactDom Condition="$(PackageJsonDependenciesReactDom) == ''">^19.1.1</PackageJsonDependenciesReactDom>
+    <PackageJsonDependenciesReactLeaflet Condition="$(PackageJsonDependenciesReactLeaflet) == ''">^5.0.0</PackageJsonDependenciesReactLeaflet>
+    <PackageJsonDependenciesTailwindMerge Condition="$(PackageJsonDependenciesTailwindMerge) == ''">^3.3.1</PackageJsonDependenciesTailwindMerge>
+    <PackageJsonDependenciesTailwindcss Condition="$(PackageJsonDependenciesTailwindcss) == ''">^4.1.12</PackageJsonDependenciesTailwindcss>
+    <PackageJsonDependenciesUuid Condition="$(PackageJsonDependenciesUuid) == ''">^11.1.0</PackageJsonDependenciesUuid>
+    <PackageJsonDependenciesZustand Condition="$(PackageJsonDependenciesZustand) == ''">^5.0.8</PackageJsonDependenciesZustand>
+    <PackageJsonDevdependenciesEslintJs Condition="$(PackageJsonDevdependenciesEslintJs) == ''">^9.33.0</PackageJsonDevdependenciesEslintJs>
+    <PackageJsonDevdependenciesTestingLibraryJestDom Condition="$(PackageJsonDevdependenciesTestingLibraryJestDom) == ''">^6.8.0</PackageJsonDevdependenciesTestingLibraryJestDom>
+    <PackageJsonDevdependenciesTypesD3 Condition="$(PackageJsonDevdependenciesTypesD3) == ''">^7.4.3</PackageJsonDevdependenciesTypesD3>
+    <PackageJsonDevdependenciesTypesD3Contour Condition="$(PackageJsonDevdependenciesTypesD3Contour) == ''">^3.0.6</PackageJsonDevdependenciesTypesD3Contour>
+    <PackageJsonDevdependenciesTypesD3Geo Condition="$(PackageJsonDevdependenciesTypesD3Geo) == ''">^3.1.0</PackageJsonDevdependenciesTypesD3Geo>
+    <PackageJsonDevdependenciesTypesD3Scale Condition="$(PackageJsonDevdependenciesTypesD3Scale) == ''">^4.0.9</PackageJsonDevdependenciesTypesD3Scale>
+    <PackageJsonDevdependenciesTypesDelaunator Condition="$(PackageJsonDevdependenciesTypesDelaunator) == ''">^5.0.3</PackageJsonDevdependenciesTypesDelaunator>
+    <PackageJsonDevdependenciesTypesMathjs Condition="$(PackageJsonDevdependenciesTypesMathjs) == ''">^9.4.1</PackageJsonDevdependenciesTypesMathjs>
+    <PackageJsonDevdependenciesTypesReact Condition="$(PackageJsonDevdependenciesTypesReact) == ''">^19.1.10</PackageJsonDevdependenciesTypesReact>
+    <PackageJsonDevdependenciesTypesReactDom Condition="$(PackageJsonDevdependenciesTypesReactDom) == ''">^19.1.7</PackageJsonDevdependenciesTypesReactDom>
+    <PackageJsonDevdependenciesTypesUuid Condition="$(PackageJsonDevdependenciesTypesUuid) == ''">^10.0.0</PackageJsonDevdependenciesTypesUuid>
+    <PackageJsonDevdependenciesVitejsPluginReact Condition="$(PackageJsonDevdependenciesVitejsPluginReact) == ''">^5.0.0</PackageJsonDevdependenciesVitejsPluginReact>
+    <PackageJsonDevdependenciesEslint Condition="$(PackageJsonDevdependenciesEslint) == ''">^9.33.0</PackageJsonDevdependenciesEslint>
+    <PackageJsonDevdependenciesEslintPluginReactHooks Condition="$(PackageJsonDevdependenciesEslintPluginReactHooks) == ''">^5.2.0</PackageJsonDevdependenciesEslintPluginReactHooks>
+    <PackageJsonDevdependenciesEslintPluginReactRefresh Condition="$(PackageJsonDevdependenciesEslintPluginReactRefresh) == ''">^0.4.20</PackageJsonDevdependenciesEslintPluginReactRefresh>
+    <PackageJsonDevdependenciesGlobals Condition="$(PackageJsonDevdependenciesGlobals) == ''">^16.3.0</PackageJsonDevdependenciesGlobals>
+    <PackageJsonDevdependenciesJsdom Condition="$(PackageJsonDevdependenciesJsdom) == ''">^24.1.0</PackageJsonDevdependenciesJsdom>
+    <PackageJsonDevdependenciesTwAnimateCss Condition="$(PackageJsonDevdependenciesTwAnimateCss) == ''">^1.3.7</PackageJsonDevdependenciesTwAnimateCss>
+    <PackageJsonDevdependenciesTypescript Condition="$(PackageJsonDevdependenciesTypescript) == ''">~5.8.3</PackageJsonDevdependenciesTypescript>
+    <PackageJsonDevdependenciesTypescriptEslint Condition="$(PackageJsonDevdependenciesTypescriptEslint) == ''">^8.39.1</PackageJsonDevdependenciesTypescriptEslint>
+    <PackageJsonDevdependenciesVite Condition="$(PackageJsonDevdependenciesVite) == ''">^7.1.2</PackageJsonDevdependenciesVite>
+    <PackageJsonDevdependenciesVitest Condition="$(PackageJsonDevdependenciesVitest) == ''">^3.2.4</PackageJsonDevdependenciesVitest>
+  </PropertyGroup>
+</Project>

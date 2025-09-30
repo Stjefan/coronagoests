@@ -1,0 +1,987 @@
+{
+  "ProjectData": {
+    "Trassen": [],
+    "Hoehenpunkte": [
+      {
+        "LfdNummer": 1,
+        "GK_Vektor": {
+          "GK": {
+            "Hoch": 5387345.79,
+            "Rechts": 3522278.47
+          },
+          "z": 150.0
+        }
+      },
+      {
+        "LfdNummer": 2,
+        "GK_Vektor": {
+          "GK": {
+            "Hoch": 5388847.4,
+            "Rechts": 3528798.65
+          },
+          "z": 150.0
+        }
+      },
+      {
+        "LfdNummer": 3,
+        "GK_Vektor": {
+          "GK": {
+            "Hoch": 5388484.97,
+            "Rechts": 3517048.14
+          },
+          "z": 50.0
+        }
+      },
+      {
+        "LfdNummer": 4,
+        "GK_Vektor": {
+          "GK": {
+            "Hoch": 5378770.11,
+            "Rechts": 3523387.2
+          },
+          "z": 50.0
+        }
+      },
+      {
+        "LfdNummer": 5,
+        "GK_Vektor": {
+          "GK": {
+            "Hoch": 5387628.92,
+            "Rechts": 3536963.67
+          },
+          "z": 50.0
+        }
+      },
+      {
+        "LfdNummer": 6,
+        "GK_Vektor": {
+          "GK": {
+            "Hoch": 5397343.78,
+            "Rechts": 3530624.62
+          },
+          "z": 50.0
+        }
+      }
+    ],
+    "DGMDreiecke": [
+      {
+        "A": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 1,
+            "OVektor": {
+              "x": 207,
+              "y": 210,
+              "Length": 294.8711583047755
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387345.79,
+                "Rechts": 3522278.47
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "B": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 3,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388484.97,
+                "Rechts": 3517048.14
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "C": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 4,
+            "OVektor": {
+              "x": 0,
+              "y": 639,
+              "Length": 639.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5378770.11,
+                "Rechts": 3523387.2
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "LfdNummer": 1
+      },
+      {
+        "A": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 1,
+            "OVektor": {
+              "x": 207,
+              "y": 210,
+              "Length": 294.8711583047755
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387345.79,
+                "Rechts": 3522278.47
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "B": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 4,
+            "OVektor": {
+              "x": 0,
+              "y": 639,
+              "Length": 639.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5378770.11,
+                "Rechts": 3523387.2
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "C": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 2,
+            "OVektor": {
+              "x": 553,
+              "y": 337,
+              "Length": 647.5940086195981
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388847.4,
+                "Rechts": 3528798.65
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "LfdNummer": 2
+      },
+      {
+        "A": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 1,
+            "OVektor": {
+              "x": 207,
+              "y": 210,
+              "Length": 294.8711583047755
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387345.79,
+                "Rechts": 3522278.47
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "B": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 2,
+            "OVektor": {
+              "x": 553,
+              "y": 337,
+              "Length": 647.5940086195981
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388847.4,
+                "Rechts": 3528798.65
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "C": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 6,
+            "OVektor": {
+              "x": 893,
+              "y": 0,
+              "Length": 893.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5397343.78,
+                "Rechts": 3530624.62
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "LfdNummer": 3
+      },
+      {
+        "A": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 2,
+            "OVektor": {
+              "x": 553,
+              "y": 337,
+              "Length": 647.5940086195981
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388847.4,
+                "Rechts": 3528798.65
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "B": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 4,
+            "OVektor": {
+              "x": 0,
+              "y": 639,
+              "Length": 639.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5378770.11,
+                "Rechts": 3523387.2
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "C": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 5,
+            "OVektor": {
+              "x": 893,
+              "y": 639,
+              "Length": 1098.075589383536
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387628.92,
+                "Rechts": 3536963.67
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "LfdNummer": 4
+      },
+      {
+        "A": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 1,
+            "OVektor": {
+              "x": 207,
+              "y": 210,
+              "Length": 294.8711583047755
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387345.79,
+                "Rechts": 3522278.47
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "B": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 6,
+            "OVektor": {
+              "x": 893,
+              "y": 0,
+              "Length": 893.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5397343.78,
+                "Rechts": 3530624.62
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "C": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 3,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388484.97,
+                "Rechts": 3517048.14
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "LfdNummer": 5
+      },
+      {
+        "A": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 6,
+            "OVektor": {
+              "x": 893,
+              "y": 0,
+              "Length": 893.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5397343.78,
+                "Rechts": 3530624.62
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "B": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 2,
+            "OVektor": {
+              "x": 553,
+              "y": 337,
+              "Length": 647.5940086195981
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388847.4,
+                "Rechts": 3528798.65
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "C": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 5,
+            "OVektor": {
+              "x": 893,
+              "y": 639,
+              "Length": 1098.075589383536
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387628.92,
+                "Rechts": 3536963.67
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "LfdNummer": 6
+      }
+    ],
+    "DGMKanten": [
+      {
+        "EckeA": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 1,
+            "OVektor": {
+              "x": 207,
+              "y": 210,
+              "Length": 294.8711583047755
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387345.79,
+                "Rechts": 3522278.47
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "EckeB": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 3,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388484.97,
+                "Rechts": 3517048.14
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "DreieckA": 0,
+        "DreieckB": 0
+      },
+      {
+        "EckeA": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 1,
+            "OVektor": {
+              "x": 207,
+              "y": 210,
+              "Length": 294.8711583047755
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387345.79,
+                "Rechts": 3522278.47
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "EckeB": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 4,
+            "OVektor": {
+              "x": 0,
+              "y": 639,
+              "Length": 639.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5378770.11,
+                "Rechts": 3523387.2
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "DreieckA": 0,
+        "DreieckB": 0
+      },
+      {
+        "EckeA": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 3,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388484.97,
+                "Rechts": 3517048.14
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "EckeB": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 4,
+            "OVektor": {
+              "x": 0,
+              "y": 639,
+              "Length": 639.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5378770.11,
+                "Rechts": 3523387.2
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "DreieckA": 0,
+        "DreieckB": 0
+      },
+      {
+        "EckeA": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 1,
+            "OVektor": {
+              "x": 207,
+              "y": 210,
+              "Length": 294.8711583047755
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387345.79,
+                "Rechts": 3522278.47
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "EckeB": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 2,
+            "OVektor": {
+              "x": 553,
+              "y": 337,
+              "Length": 647.5940086195981
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388847.4,
+                "Rechts": 3528798.65
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "DreieckA": 1,
+        "DreieckB": 0
+      },
+      {
+        "EckeA": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 4,
+            "OVektor": {
+              "x": 0,
+              "y": 639,
+              "Length": 639.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5378770.11,
+                "Rechts": 3523387.2
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "EckeB": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 2,
+            "OVektor": {
+              "x": 553,
+              "y": 337,
+              "Length": 647.5940086195981
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388847.4,
+                "Rechts": 3528798.65
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "DreieckA": 1,
+        "DreieckB": 0
+      },
+      {
+        "EckeA": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 1,
+            "OVektor": {
+              "x": 207,
+              "y": 210,
+              "Length": 294.8711583047755
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387345.79,
+                "Rechts": 3522278.47
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "EckeB": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 6,
+            "OVektor": {
+              "x": 893,
+              "y": 0,
+              "Length": 893.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5397343.78,
+                "Rechts": 3530624.62
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "DreieckA": 2,
+        "DreieckB": 0
+      },
+      {
+        "EckeA": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 2,
+            "OVektor": {
+              "x": 553,
+              "y": 337,
+              "Length": 647.5940086195981
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388847.4,
+                "Rechts": 3528798.65
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "EckeB": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 6,
+            "OVektor": {
+              "x": 893,
+              "y": 0,
+              "Length": 893.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5397343.78,
+                "Rechts": 3530624.62
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "DreieckA": 2,
+        "DreieckB": 0
+      },
+      {
+        "EckeA": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 2,
+            "OVektor": {
+              "x": 553,
+              "y": 337,
+              "Length": 647.5940086195981
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388847.4,
+                "Rechts": 3528798.65
+              },
+              "z": 150.0
+            }
+          }
+        },
+        "EckeB": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 5,
+            "OVektor": {
+              "x": 893,
+              "y": 639,
+              "Length": 1098.075589383536
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387628.92,
+                "Rechts": 3536963.67
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "DreieckA": 3,
+        "DreieckB": 0
+      },
+      {
+        "EckeA": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 4,
+            "OVektor": {
+              "x": 0,
+              "y": 639,
+              "Length": 639.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5378770.11,
+                "Rechts": 3523387.2
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "EckeB": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 5,
+            "OVektor": {
+              "x": 893,
+              "y": 639,
+              "Length": 1098.075589383536
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387628.92,
+                "Rechts": 3536963.67
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "DreieckA": 3,
+        "DreieckB": 0
+      },
+      {
+        "EckeA": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 6,
+            "OVektor": {
+              "x": 893,
+              "y": 0,
+              "Length": 893.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5397343.78,
+                "Rechts": 3530624.62
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "EckeB": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 3,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5388484.97,
+                "Rechts": 3517048.14
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "DreieckA": 4,
+        "DreieckB": 0
+      },
+      {
+        "EckeA": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 6,
+            "OVektor": {
+              "x": 893,
+              "y": 0,
+              "Length": 893.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5397343.78,
+                "Rechts": 3530624.62
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "EckeB": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 5,
+            "OVektor": {
+              "x": 893,
+              "y": 639,
+              "Length": 1098.075589383536
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5387628.92,
+                "Rechts": 3536963.67
+              },
+              "z": 50.0
+            }
+          }
+        },
+        "DreieckA": 5,
+        "DreieckB": 0
+      }
+    ],
+    "ImmissionPoints": [
+      {
+        "Name": "I1",
+        "OriginalData": {
+          "Name": "I1",
+          "Hoehe": 3.0,
+          "G_Bodenfaktor": 0.0,
+          "bStatusBerechnung": false,
+          "IPunkt": {
+            "HP": {
+              "lfdNummer": 1,
+              "OVektor": {
+                "x": 0,
+                "y": 0,
+                "Length": 0.0
+              },
+              "GK_Vektor": {
+                "GK": {
+                  "Hoch": 5389292.98,
+                  "Rechts": 3525993.45
+                },
+                "z": 139.48282
+              }
+            },
+            "Trasse_LatLTPegel": 0.0,
+            "Trasse_ImmiRasterPegel": 0.0,
+            "Trasse_BeurtPegel": 0.0,
+            "Trasse_gefunden": false,
+            "Tag_LatLTPegel": 0.0,
+            "Tag_ImmiRasterPegel": 21.7,
+            "Tag_BeurtPegel": 21.7,
+            "Tag_gefunden": false,
+            "Nacht_LatLTPegel": 0.0,
+            "Nacht_ImmiRasterPegel": 0.0,
+            "Nacht_BeurtPegel": 0.0,
+            "Nacht_gefunden": false,
+            "ltStunde_LatLTPegel": 0.0,
+            "ltStunde_ImmiRasterPegel": 0.0,
+            "ltStunde_BeurtPegel": 0.0,
+            "ltStunde_gefunden": false,
+            "Tag_GES_BeurtPegel": 21.7,
+            "Tag_GES_ImmiRasterPegel": -1.0,
+            "Tag_GES_gefunden": false,
+            "Nacht_GES_BeurtPegel": 0.0,
+            "Nacht_GES_ImmiRasterPegel": -1.0,
+            "Nacht_GES_gefunden": false,
+            "ltStunde_Ges_BeurtPegel": 0.0,
+            "ltStunde_Ges_ImmiRasterPegel": -1.0,
+            "ltStunde_GES_gefunden": false,
+            "Innerhalb": false
+          }
+        },
+        "Position": {
+          "GK": {
+            "Hoch": 5389292.98,
+            "Rechts": 3525993.45
+          },
+          "z": 139.48282
+        },
+        "HeightOffset": 3.0,
+        "G_Bodenfaktor": 0.0
+      }
+    ],
+    "LeiterTypes": [],
+    "ESQSources": [
+      {
+        "Bezeichnung": "IO 1",
+        "Position": {
+          "GK": {
+            "Hoch": 5386555.7,
+            "Rechts": 3524788.23
+          },
+          "z": 139.50804
+        },
+        "Hoehe": 5.0,
+        "Raumwinkelmass": 0,
+        "Beurteilungszeitraum": 0,
+        "Schallleistungspegel": true,
+        "L": 110.0,
+        "S": 0.0,
+        "Z_Impulshaltigkeit": 0.0,
+        "Z_Tonhaltigkeit": 0.0,
+        "Z_Cmet": 0.0,
+        "Ruhezeitzuschlag": false
+      }
+    ],
+    "AgrKorrektur": false,
+    "Name": "Simple With Terrain 1",
+    "Pfad": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "bBerechneCmet": false,
+    "Ts": 0.0,
+    "Tlr": 0.0,
+    "Tkr": 0.0,
+    "Ks": 0,
+    "Klr": 0,
+    "Kkr": 0,
+    "Cmet": 0.0,
+    "Kt": 0,
+    "mitFrequenz": false,
+    "iHPunkt_Element": 6,
+    "iDGMDreieck_Element": 6,
+    "iDGMKante_Element": 11,
+    "iTrasse_Element": 0,
+    "iES_Element": 1,
+    "iIOrt_Element": 1,
+    "GKR_A": 3529920.0,
+    "GKH_A": 5385634.0,
+    "GKR_B": 3525792.0,
+    "GKH_B": 5385715.0,
+    "PX_A": 508,
+    "PY_A": 519,
+    "PX_B": 320,
+    "PY_B": 391,
+    "IM_X_max": 893,
+    "IM_Y_max": 639
+  },
+  "ExpectedResults": [
+    {
+      "ImmissionPointIndex": 0,
+      "ImmissionPointName": "I1",
+      "LatLT": 21.72199494171143,
+      "Position": {
+        "Rechts": 3525993.45,
+        "Hoch": 5389292.98,
+        "Z": 139.48282
+      },
+      "HeightOffset": 3.0,
+      "DebugOutput": "    UsedDataCalculator - Processing: I1\r\n    Using ImmiPkt: Rechts=3525993,45, Hoch=5389292,98, Z=139,48282\r\n    Processing ESQ: IO 1\r\n      Distance to ESQ: 2990,86 m\r\n      Using direct Lw: 110 dB\r\nDEBUG: Screening detected - z=0,0747, Kmet=0,0000, Attenuation=4,77 dB\r\nDEBUG: mtlHoehe=-3,196826572121312, dP=2991,0032635597927\r\nDEBUG: Using screening attenuation Dz = 4,7712 dB\r\nDEBUG: screeningOrAgr=4,7712, mtlHoehe=-3,1968, dP=2991,0033\r\n      Attenuation: Adiv=80,52, Aatm=2,99, Agrbar=4,77, Cmet=0,00\r\n      Lw=110,00, DOmega=0,00, Total A=88,28\r\n      Penalties: ZRuhe=0,0, Z_Ton=0,0, Z_Impuls=0,0\r\n      ESQ contribution: 21,72 dB\r\n    ESQ total contribution: 21,72 dB\r\n    Total transmission lines in UsedData: 0\r\n[UsedDataCalculator] Total LatLT for immission point 0: 21,72 dB\r\nDEBUG: Total Iteration_Leiter result = 148,66183670423885\r\n"
+    }
+  ],
+  "Metadata": {
+    "ProjectPath": "C:\\kufi-kataster-testdaten\\Corona\\Simple With Terrain 1",
+    "ExportDate": "2025-08-27 12:16:07",
+    "CalculatorVersion": "C# UsedDataCalculator v1.0"
+  }
+}

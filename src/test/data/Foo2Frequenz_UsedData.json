@@ -1,0 +1,1116 @@
+{
+  "ProjectData": {
+    "Trassen": [
+      {
+        "Nummer": 1,
+        "Name": "XX",
+        "AnzahlMastebenen": 1,
+        "AnzahlMastleitungen": 1,
+        "UsedMasten": [
+          {
+            "Fusspunkt": {
+              "lfdNummer": 1,
+              "OVektor": {
+                "x": 0,
+                "y": 0,
+                "Length": 0.0
+              },
+              "GK_Vektor": {
+                "GK": {
+                  "Hoch": 5385760.03,
+                  "Rechts": 3525778.25
+                },
+                "z": 0.0
+              }
+            },
+            "Name": "",
+            "NullpunktHoehe": 100.0,
+            "MastHoehe": 100.0,
+            "Ausrichtung": {
+              "x": -10,
+              "y": 1,
+              "Length": 10.04987562112089
+            },
+            "GKAusrichtung": {
+              "Hoch": 88.09808786083383,
+              "Rechts": 996.1118044252183
+            },
+            "UsedEbenen": [
+              {
+                "NummerEbene": 1,
+                "AbstandNullpunkt": -50.0,
+                "UsedLeitungenLinks": [],
+                "UsedLeitungenRechts": [
+                  {
+                    "Durchgangspunkt": {
+                      "GK": {
+                        "Hoch": 5385759.149019142,
+                        "Rechts": 3525768.2888821783
+                      },
+                      "z": 145.0
+                    },
+                    "ACDC": 3,
+                    "NummerLeiter": 1,
+                    "AbstandMastachse": 10.0,
+                    "Isolatorlaenge": 5.0,
+                    "NextMastEbene": 1,
+                    "NextMastLeiter": 1,
+                    "Einbauart": 0,
+                    "Durchhang": 7.0,
+                    "ParabelA": 0.0162740039979125,
+                    "ParabelB": 0.771468453522761,
+                    "ParabelC": 145.0,
+                    "SchallLw": "X1",
+                    "SchallLwDB": 0.0,
+                    "BetrU": 41.479336,
+                    "AmSeg": 8,
+                    "SegLenU": 5.184917,
+                    "LeiterLen": 61.77533531188965,
+                    "Mittelpkt": {
+                      "GK": {
+                        "Hoch": 5385738.42592104,
+                        "Rechts": 3525769.117770211
+                      },
+                      "z": 168.0
+                    },
+                    "SegmentPunkte": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Fusspunkt": {
+              "lfdNummer": 2,
+              "OVektor": {
+                "x": 0,
+                "y": 0,
+                "Length": 0.0
+              },
+              "GK_Vektor": {
+                "GK": {
+                  "Hoch": 5385718.76,
+                  "Rechts": 3525781.9
+                },
+                "z": 0.0
+              }
+            },
+            "Name": "",
+            "NullpunktHoehe": 120.0,
+            "MastHoehe": 120.0,
+            "Ausrichtung": {
+              "x": -10,
+              "y": 1,
+              "Length": 10.04987562112089
+            },
+            "GKAusrichtung": {
+              "Hoch": 88.09808786083383,
+              "Rechts": 996.1118044252183
+            },
+            "UsedEbenen": [
+              {
+                "NummerEbene": 1,
+                "AbstandNullpunkt": -90.0,
+                "UsedLeitungenLinks": [],
+                "UsedLeitungenRechts": [
+                  {
+                    "Durchgangspunkt": {
+                      "GK": {
+                        "Hoch": 5385717.702822937,
+                        "Rechts": 3525769.946658243
+                      },
+                      "z": 205.0
+                    },
+                    "ACDC": 0,
+                    "NummerLeiter": 1,
+                    "AbstandMastachse": 12.0,
+                    "Isolatorlaenge": 5.0,
+                    "NextMastEbene": 0,
+                    "NextMastLeiter": 0,
+                    "Einbauart": 0,
+                    "Durchhang": 0.0,
+                    "ParabelA": 0.0,
+                    "ParabelB": 0.0,
+                    "ParabelC": 0.0,
+                    "SchallLw": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "SchallLwDB": 0.0,
+                    "BetrU": 0.0,
+                    "AmSeg": 0,
+                    "SegLenU": 0.0,
+                    "LeiterLen": 0.0,
+                    "Mittelpkt": {
+                      "GK": {
+                        "Hoch": 0.0,
+                        "Rechts": 0.0
+                      },
+                      "z": 0.0
+                    },
+                    "SegmentPunkte": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Nummer": 2,
+        "Name": "T2",
+        "AnzahlMastebenen": 1,
+        "AnzahlMastleitungen": 2,
+        "UsedMasten": [
+          {
+            "Fusspunkt": {
+              "lfdNummer": 1,
+              "OVektor": {
+                "x": 0,
+                "y": 0,
+                "Length": 0.0
+              },
+              "GK_Vektor": {
+                "GK": {
+                  "Hoch": 5385842.19,
+                  "Rechts": 3525895.03
+                },
+                "z": 0.0
+              }
+            },
+            "Name": "",
+            "NullpunktHoehe": 100.0,
+            "MastHoehe": 100.0,
+            "Ausrichtung": {
+              "x": -10,
+              "y": 2,
+              "Length": 10.198039027185569
+            },
+            "GKAusrichtung": {
+              "Hoch": 193.92990652378077,
+              "Rechts": 981.0153879301168
+            },
+            "UsedEbenen": [
+              {
+                "NummerEbene": 1,
+                "AbstandNullpunkt": -55.0,
+                "UsedLeitungenLinks": [
+                  {
+                    "Durchgangspunkt": {
+                      "GK": {
+                        "Hoch": 5385844.129299022,
+                        "Rechts": 3525904.8401536597
+                      },
+                      "z": 150.0
+                    },
+                    "ACDC": 1,
+                    "NummerLeiter": 1,
+                    "AbstandMastachse": 10.0,
+                    "Isolatorlaenge": 5.0,
+                    "NextMastEbene": 1,
+                    "NextMastLeiter": -1,
+                    "Einbauart": 0,
+                    "Durchhang": 5.0,
+                    "ParabelA": 0.00431912974352954,
+                    "ParabelB": 0.367386451145518,
+                    "ParabelC": 150.0,
+                    "SchallLw": "X1",
+                    "SchallLwDB": 0.0,
+                    "BetrU": 68.04823,
+                    "AmSeg": 14,
+                    "SegLenU": 4.860588,
+                    "LeiterLen": 75.49812126159668,
+                    "Mittelpkt": {
+                      "GK": {
+                        "Hoch": 5385810.246998728,
+                        "Rechts": 3525907.9434323898
+                      },
+                      "z": 167.5
+                    },
+                    "SegmentPunkte": []
+                  }
+                ],
+                "UsedLeitungenRechts": [
+                  {
+                    "Durchgangspunkt": {
+                      "GK": {
+                        "Hoch": 5385839.281051467,
+                        "Rechts": 3525880.3147695097
+                      },
+                      "z": 150.0
+                    },
+                    "ACDC": 1,
+                    "NummerLeiter": 1,
+                    "AbstandMastachse": 15.0,
+                    "Isolatorlaenge": 5.0,
+                    "NextMastEbene": 1,
+                    "NextMastLeiter": 1,
+                    "Einbauart": 0,
+                    "Durchhang": 4.0,
+                    "ParabelA": 0.00287273433536546,
+                    "ParabelB": 0.388584737866333,
+                    "ParabelC": 150.0,
+                    "SchallLw": "X1",
+                    "SchallLwDB": 0.0,
+                    "BetrU": 74.6298,
+                    "AmSeg": 15,
+                    "SegLenU": 4.97532,
+                    "LeiterLen": 81.12397527694702,
+                    "Mittelpkt": {
+                      "GK": {
+                        "Hoch": 5385804.195089352,
+                        "Rechts": 3525893.018190408
+                      },
+                      "z": 168.5
+                    },
+                    "SegmentPunkte": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Fusspunkt": {
+              "lfdNummer": 2,
+              "OVektor": {
+                "x": 0,
+                "y": 0,
+                "Length": 0.0
+              },
+              "GK_Vektor": {
+                "GK": {
+                  "Hoch": 5385773.14,
+                  "Rechts": 3525908.68
+                },
+                "z": 0.0
+              }
+            },
+            "Name": "",
+            "NullpunktHoehe": 110.0,
+            "MastHoehe": 110.0,
+            "Ausrichtung": {
+              "x": 6,
+              "y": -8,
+              "Length": 10.0
+            },
+            "GKAusrichtung": {
+              "Hoch": 806.1745703852118,
+              "Rechts": 591.6777518753083
+            },
+            "UsedEbenen": [
+              {
+                "NummerEbene": 1,
+                "AbstandNullpunkt": -90.0,
+                "UsedLeitungenLinks": [
+                  {
+                    "Durchgangspunkt": {
+                      "GK": {
+                        "Hoch": 5385776.364698434,
+                        "Rechts": 3525911.0467111203
+                      },
+                      "z": 195.0
+                    },
+                    "ACDC": 1,
+                    "NummerLeiter": 1,
+                    "AbstandMastachse": 4.0,
+                    "Isolatorlaenge": 5.0,
+                    "NextMastEbene": 1,
+                    "NextMastLeiter": -1,
+                    "Einbauart": 0,
+                    "Durchhang": 6.0,
+                    "ParabelA": 0.00525448386388088,
+                    "ParabelB": -0.843401300137055,
+                    "ParabelC": 195.0,
+                    "SchallLw": "X1",
+                    "SchallLwDB": 0.0,
+                    "BetrU": 67.58349,
+                    "AmSeg": 14,
+                    "SegLenU": 4.827392,
+                    "LeiterLen": 71.34658622741699,
+                    "Mittelpkt": {
+                      "GK": {
+                        "Hoch": 5385780.575403137,
+                        "Rechts": 3525944.575085111
+                      },
+                      "z": 172.5
+                    },
+                    "SegmentPunkte": [
+                      {
+                        "GK": {
+                          "Hoch": 5385776.364698434,
+                          "Rechts": 3525911.0467111203
+                        },
+                        "z": 195.0
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385776.966227686,
+                          "Rechts": 3525915.836478901
+                        },
+                        "z": 191.05103
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385777.567756938,
+                          "Rechts": 3525920.6262466814
+                        },
+                        "z": 187.34694
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385778.16928613,
+                          "Rechts": 3525925.4160139887
+                        },
+                        "z": 183.88776
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385778.770815441,
+                          "Rechts": 3525930.2057822426
+                        },
+                        "z": 180.67346
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385779.372344753,
+                          "Rechts": 3525934.9955504965
+                        },
+                        "z": 177.70409
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385779.973873827,
+                          "Rechts": 3525939.7853168575
+                        },
+                        "z": 174.9796
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385780.575403137,
+                          "Rechts": 3525944.575085111
+                        },
+                        "z": 172.5
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385781.1769324485,
+                          "Rechts": 3525949.364853365
+                        },
+                        "z": 170.2653
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385781.77846176,
+                          "Rechts": 3525954.154621619
+                        },
+                        "z": 168.27551
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385782.379991071,
+                          "Rechts": 3525958.9443898723
+                        },
+                        "z": 166.53061
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385782.981520383,
+                          "Rechts": 3525963.734158126
+                        },
+                        "z": 165.03061
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385783.583049218,
+                          "Rechts": 3525968.5239225947
+                        },
+                        "z": 163.77551
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385784.18457853,
+                          "Rechts": 3525973.313690848
+                        },
+                        "z": 162.7653
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 0.0,
+                          "Rechts": 0.0
+                        },
+                        "z": 0.0
+                      }
+                    ]
+                  }
+                ],
+                "UsedLeitungenRechts": [
+                  {
+                    "Durchgangspunkt": {
+                      "GK": {
+                        "Hoch": 5385769.109127237,
+                        "Rechts": 3525905.721611307
+                      },
+                      "z": 195.0
+                    },
+                    "ACDC": 2,
+                    "NummerLeiter": 1,
+                    "AbstandMastachse": 5.0,
+                    "Isolatorlaenge": 5.0,
+                    "NextMastEbene": 1,
+                    "NextMastLeiter": 1,
+                    "Einbauart": 0,
+                    "Durchhang": 6.0,
+                    "ParabelA": 0.00442185300184316,
+                    "ParabelB": -0.773697841618107,
+                    "ParabelC": 195.0,
+                    "SchallLw": "X1",
+                    "SchallLwDB": 0.0,
+                    "BetrU": 73.67217,
+                    "AmSeg": 15,
+                    "SegLenU": 4.911478,
+                    "LeiterLen": 76.74701023101807,
+                    "Mittelpkt": {
+                      "GK": {
+                        "Hoch": 5385772.474496392,
+                        "Rechts": 3525942.4036436956
+                      },
+                      "z": 172.5
+                    },
+                    "SegmentPunkte": [
+                      {
+                        "GK": {
+                          "Hoch": 5385769.109127237,
+                          "Rechts": 3525905.721611307
+                        },
+                        "z": 195.0
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385769.557843113,
+                          "Rechts": 3525910.6125488323
+                        },
+                        "z": 191.30667
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385770.006558988,
+                          "Rechts": 3525915.5034863576
+                        },
+                        "z": 187.82666
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385770.455274864,
+                          "Rechts": 3525920.3944238825
+                        },
+                        "z": 184.56
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385770.90399074,
+                          "Rechts": 3525925.285361408
+                        },
+                        "z": 181.50667
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385771.352706616,
+                          "Rechts": 3525930.176298933
+                        },
+                        "z": 178.66667
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385771.801422491,
+                          "Rechts": 3525935.0672364584
+                        },
+                        "z": 176.04
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385772.250138541,
+                          "Rechts": 3525939.958175883
+                        },
+                        "z": 173.62666
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385772.698854242,
+                          "Rechts": 3525944.8491115086
+                        },
+                        "z": 171.42667
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385773.147569943,
+                          "Rechts": 3525949.7400471345
+                        },
+                        "z": 169.44
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385773.596285993,
+                          "Rechts": 3525954.630986559
+                        },
+                        "z": 167.66667
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385774.045002043,
+                          "Rechts": 3525959.521925984
+                        },
+                        "z": 166.10666
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385774.493717745,
+                          "Rechts": 3525964.41286161
+                        },
+                        "z": 164.76
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385774.942433446,
+                          "Rechts": 3525969.3037972357
+                        },
+                        "z": 163.62666
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 5385775.391149844,
+                          "Rechts": 3525974.194740459
+                        },
+                        "z": 162.70667
+                      },
+                      {
+                        "GK": {
+                          "Hoch": 0.0,
+                          "Rechts": 0.0
+                        },
+                        "z": 0.0
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Fusspunkt": {
+              "lfdNummer": 3,
+              "OVektor": {
+                "x": 0,
+                "y": 0,
+                "Length": 0.0
+              },
+              "GK_Vektor": {
+                "GK": {
+                  "Hoch": 5385780.81,
+                  "Rechts": 3525978.54
+                },
+                "z": 0.0
+              }
+            },
+            "Name": "",
+            "NullpunktHoehe": 90.0,
+            "MastHoehe": 90.0,
+            "Ausrichtung": {
+              "x": 1,
+              "y": 10,
+              "Length": 10.04987562112089
+            },
+            "GKAusrichtung": {
+              "Hoch": 994.0269130659448,
+              "Rechts": -109.1352193409099
+            },
+            "UsedEbenen": [
+              {
+                "NummerEbene": 1,
+                "AbstandNullpunkt": -77.0,
+                "UsedLeitungenLinks": [
+                  {
+                    "Durchgangspunkt": {
+                      "GK": {
+                        "Hoch": 5385784.786107841,
+                        "Rechts": 3525978.103459102
+                      },
+                      "z": 162.0
+                    },
+                    "ACDC": 0,
+                    "NummerLeiter": 1,
+                    "AbstandMastachse": 4.0,
+                    "Isolatorlaenge": 5.0,
+                    "NextMastEbene": 0,
+                    "NextMastLeiter": 0,
+                    "Einbauart": 0,
+                    "Durchhang": 0.0,
+                    "ParabelA": 0.0,
+                    "ParabelB": 0.0,
+                    "ParabelC": 0.0,
+                    "SchallLw": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "SchallLwDB": 0.0,
+                    "BetrU": 0.0,
+                    "AmSeg": 0,
+                    "SegLenU": 0.0,
+                    "LeiterLen": 0.0,
+                    "Mittelpkt": {
+                      "GK": {
+                        "Hoch": 0.0,
+                        "Rechts": 0.0
+                      },
+                      "z": 0.0
+                    },
+                    "SegmentPunkte": []
+                  }
+                ],
+                "UsedLeitungenRechts": [
+                  {
+                    "Durchgangspunkt": {
+                      "GK": {
+                        "Hoch": 5385775.839865546,
+                        "Rechts": 3525979.0856760847
+                      },
+                      "z": 162.0
+                    },
+                    "ACDC": 0,
+                    "NummerLeiter": 1,
+                    "AbstandMastachse": 5.0,
+                    "Isolatorlaenge": 5.0,
+                    "NextMastEbene": 0,
+                    "NextMastLeiter": 0,
+                    "Einbauart": 0,
+                    "Durchhang": 0.0,
+                    "ParabelA": 0.0,
+                    "ParabelB": 0.0,
+                    "ParabelC": 0.0,
+                    "SchallLw": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+                    "SchallLwDB": 0.0,
+                    "BetrU": 0.0,
+                    "AmSeg": 0,
+                    "SegLenU": 0.0,
+                    "LeiterLen": 0.0,
+                    "Mittelpkt": {
+                      "GK": {
+                        "Hoch": 0.0,
+                        "Rechts": 0.0
+                      },
+                      "z": 0.0
+                    },
+                    "SegmentPunkte": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Hoehenpunkte": [
+      {
+        "LfdNummer": 1,
+        "GK_Vektor": {
+          "GK": {
+            "Hoch": 5385878.62,
+            "Rechts": 3525828.13
+          },
+          "z": 0.0
+        }
+      },
+      {
+        "LfdNummer": 2,
+        "GK_Vektor": {
+          "GK": {
+            "Hoch": 5385971.25,
+            "Rechts": 3525572.44
+          },
+          "z": 0.0
+        }
+      },
+      {
+        "LfdNummer": 3,
+        "GK_Vektor": {
+          "GK": {
+            "Hoch": 5385545.25,
+            "Rechts": 3525582.59
+          },
+          "z": 0.0
+        }
+      },
+      {
+        "LfdNummer": 4,
+        "GK_Vektor": {
+          "GK": {
+            "Hoch": 5385559.43,
+            "Rechts": 3526177.92
+          },
+          "z": 0.0
+        }
+      },
+      {
+        "LfdNummer": 5,
+        "GK_Vektor": {
+          "GK": {
+            "Hoch": 5385985.43,
+            "Rechts": 3526167.78
+          },
+          "z": 0.0
+        }
+      }
+    ],
+    "DGMDreiecke": [
+      {
+        "A": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 1,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5385878.62,
+                "Rechts": 3525828.13
+              },
+              "z": 0.0
+            }
+          }
+        },
+        "B": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 2,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5385971.25,
+                "Rechts": 3525572.44
+              },
+              "z": 0.0
+            }
+          }
+        },
+        "C": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 3,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5385545.25,
+                "Rechts": 3525582.59
+              },
+              "z": 0.0
+            }
+          }
+        },
+        "LfdNummer": 1
+      },
+      {
+        "A": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 1,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5385878.62,
+                "Rechts": 3525828.13
+              },
+              "z": 0.0
+            }
+          }
+        },
+        "B": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 3,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5385545.25,
+                "Rechts": 3525582.59
+              },
+              "z": 0.0
+            }
+          }
+        },
+        "C": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 4,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5385559.43,
+                "Rechts": 3526177.92
+              },
+              "z": 0.0
+            }
+          }
+        },
+        "LfdNummer": 2
+      },
+      {
+        "A": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 1,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5385878.62,
+                "Rechts": 3525828.13
+              },
+              "z": 0.0
+            }
+          }
+        },
+        "B": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 4,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5385559.43,
+                "Rechts": 3526177.92
+              },
+              "z": 0.0
+            }
+          }
+        },
+        "C": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 5,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5385985.43,
+                "Rechts": 3526167.78
+              },
+              "z": 0.0
+            }
+          }
+        },
+        "LfdNummer": 3
+      },
+      {
+        "A": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 1,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5385878.62,
+                "Rechts": 3525828.13
+              },
+              "z": 0.0
+            }
+          }
+        },
+        "B": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 5,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5385985.43,
+                "Rechts": 3526167.78
+              },
+              "z": 0.0
+            }
+          }
+        },
+        "C": {
+          "Nummer": -1,
+          "HP": {
+            "lfdNummer": 2,
+            "OVektor": {
+              "x": 0,
+              "y": 0,
+              "Length": 0.0
+            },
+            "GK_Vektor": {
+              "GK": {
+                "Hoch": 5385971.25,
+                "Rechts": 3525572.44
+              },
+              "z": 0.0
+            }
+          }
+        },
+        "LfdNummer": 4
+      }
+    ],
+    "DGMKanten": [],
+    "ImmissionPoints": [
+      {
+        "Name": "I1",
+        "OriginalData": {
+          "Name": "I1",
+          "Hoehe": 15.0,
+          "G_Bodenfaktor": 0.0,
+          "bStatusBerechnung": false,
+          "IPunkt": {
+            "HP": {
+              "lfdNummer": 1,
+              "OVektor": {
+                "x": 0,
+                "y": 0,
+                "Length": 0.0
+              },
+              "GK_Vektor": {
+                "GK": {
+                  "Hoch": 5385836.51,
+                  "Rechts": 3525936.52
+                },
+                "z": 15.0
+              }
+            },
+            "Trasse_LatLTPegel": 0.0,
+            "Trasse_ImmiRasterPegel": 60.1,
+            "Trasse_BeurtPegel": 60.1,
+            "Trasse_gefunden": false,
+            "Tag_LatLTPegel": 0.0,
+            "Tag_ImmiRasterPegel": 40.1,
+            "Tag_BeurtPegel": 40.1,
+            "Tag_gefunden": false,
+            "Nacht_LatLTPegel": 0.0,
+            "Nacht_ImmiRasterPegel": 0.0,
+            "Nacht_BeurtPegel": 0.0,
+            "Nacht_gefunden": false,
+            "ltStunde_LatLTPegel": 0.0,
+            "ltStunde_ImmiRasterPegel": 0.0,
+            "ltStunde_BeurtPegel": 0.0,
+            "ltStunde_gefunden": false,
+            "Tag_GES_BeurtPegel": 60.1,
+            "Tag_GES_ImmiRasterPegel": -1.0,
+            "Tag_GES_gefunden": false,
+            "Nacht_GES_BeurtPegel": 60.1,
+            "Nacht_GES_ImmiRasterPegel": -1.0,
+            "Nacht_GES_gefunden": false,
+            "ltStunde_Ges_BeurtPegel": 60.1,
+            "ltStunde_Ges_ImmiRasterPegel": -1.0,
+            "ltStunde_GES_gefunden": false,
+            "Innerhalb": false
+          }
+        },
+        "Position": {
+          "GK": {
+            "Hoch": 5385836.51,
+            "Rechts": 3525936.52
+          },
+          "z": 15.0
+        },
+        "HeightOffset": 15.0,
+        "G_Bodenfaktor": 0.0
+      }
+    ],
+    "LeiterTypes": [
+      {
+        "Name": "X1",
+        "SchallLW": 89.0
+      }
+    ],
+    "ESQSources": [
+      {
+        "Bezeichnung": "E1",
+        "Position": {
+          "GK": {
+            "Hoch": 5385832.32,
+            "Rechts": 3525732.51
+          },
+          "z": 10.0
+        },
+        "Hoehe": 10.0,
+        "Raumwinkelmass": 0,
+        "Beurteilungszeitraum": 0,
+        "Schallleistungspegel": true,
+        "L": 100.0,
+        "S": 0.0,
+        "Z_Impulshaltigkeit": 0.0,
+        "Z_Tonhaltigkeit": 0.0,
+        "Z_Cmet": 0.0,
+        "Ruhezeitzuschlag": false,
+        "Einwirkzeit": 16.0,
+        "Zeiteinheit": 2.0
+      }
+    ],
+    "AgrKorrektur": false,
+    "Name": null,
+    "Pfad": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+    "bBerechneCmet": false,
+    "Ts": 0.0,
+    "Tlr": 0.0,
+    "Tkr": 0.0,
+    "Ks": 0,
+    "Klr": 0,
+    "Kkr": 0,
+    "Cmet": 0.0,
+    "Kt": 0,
+    "mitFrequenz": true,
+    "iHPunkt_Element": 5,
+    "iDGMDreieck_Element": 4,
+    "iDGMKante_Element": 8,
+    "iTrasse_Element": 2,
+    "iES_Element": 1,
+    "iIOrt_Element": 1,
+    "GKR_A": 3525920.0,
+    "GKH_A": 5385634.0,
+    "GKR_B": 3525792.0,
+    "GKH_B": 5385715.0,
+    "PX_A": 509,
+    "PY_A": 518,
+    "PX_B": 320,
+    "PY_B": 392,
+    "IM_X_max": 893,
+    "IM_Y_max": 639
+  },
+  "Metadata": {
+    "ProjectPath": "Foo2Frequenz",
+    "ExportDate": "2025-08-29 12:20:48",
+    "CalculatorVersion": "C# UsedDataCalculator v1.0"
+  }
+}

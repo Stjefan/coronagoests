@@ -1,0 +1,29 @@
+/* Simple print styles */
+
+/* Hide print button during any print operation */
+@media print {
+  .print-hide {
+    display: none !important;
+  }
+}
+
+/* Ensure legend containers are properly positioned */
+.contour-legend-container,
+.immission-legend-container {
+  pointer-events: none;
+}
+
+.leaflet-control-legend-d3 {
+  pointer-events: none;
+}
+
+/* Make sure legend is visible and above other elements */
+.legend-d3-bottomleft {
+  bottom: 10px !important;
+  left: 10px !important;
+}
+
+.legend-d3-bottomright {
+  bottom: 10px !important;
+  right: 10px !important;
+}
